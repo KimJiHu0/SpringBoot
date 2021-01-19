@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- thymeleaf를 사용하기 위한 선언입니다. -->
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>BoardList</h1>
+
+	<table border="1">
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Title</th>
+		</tr>
+		<!-- list의 size가 0일 때, tr이 생성되고, 그 안에 th태그가 생성되어 "작성된 글이 없습니다." 라는 문구가 나옵니다. -->
+		<tr th:if="${list.size()} == 0">
+			<td colspan="4" align="center">작성된 글이 없습니다.</td>
+		</tr>
+
+		<!-- 그렇지 않고 list의 size가 0이 아닐 때 , for문을 돌려줍니다. -->
+		<!-- th:unless는 위의 if문과 동일하게 작성해주는데, 저 조건이 아닐 때 돌려주겠다는 의미입니다. -->
+		<!-- list에 담긴 값 하나를 dto에 담아줍니다. 그리고 그 안에 있는 boardno, boardname, boardtitle을 출력해줍니다. -->
+		<tr th:unless="${list.size()} == 0" th:each="dto:${list}">
+			<td th:text="${dto.boardno}"></td>
+			<td th:text="${dto.boardname}"></td>
+			<td th:text="${dto.boardtitle}"></td>
+		</tr>
+		<tr>
+			<th colspan="3" align="right">
+				<button onclick="" th:text="글작성"></button>
+			</th>
+		</tr>
+	</table>
+</body>
+</html>
