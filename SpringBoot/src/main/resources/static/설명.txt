@@ -1,0 +1,2 @@
+static Folder : 변하지 않는 , 정적인 애들을 모아주는 Folder
+html, css, js 등등,,
