@@ -1,0 +1,22 @@
+.replycontent{
+	resize: none;
+}
+
+.replycontent{
+	border: none;
+	width: 99%;
+}
+
+.replybtn{
+	float: right;
+}
+
+.replyall{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.writer, .content, .date{
+	width: 100%;
+}

@@ -1,0 +1,17 @@
+.title{
+	background-color: thistle;
+	color: white;
+}
+
+.content{
+	text-align: center;
+}
+
+.clicktitle{
+	text-decoration: none;
+	color : gray;
+}
+
+.clicktitle:hover{
+	color: black;
+}
