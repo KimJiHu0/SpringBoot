@@ -1,0 +1,13 @@
+.title{
+	background-color: thistle;
+	color: white;
+}
+
+.boardcontent{
+	resize: none;
+}
+
+.content{
+	border: none;
+	width: 99%;
+}
