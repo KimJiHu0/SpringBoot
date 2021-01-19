@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- SummerNote를 사용하기 위한 선언했습니다. -->
+<!-- include libraries(jQuery, bootstrap) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+<!-- SummerNote.js를 불러오겠습니다. -->
+<script src="/JS/boardUpdate.js"></script>
+</head>
+<body>
+
+	<h1>BoardUpdate</h1>
+
+	<form th:action="updateres.do" method="post">
+		<!-- UPDATE를 하기 위해서는 SQL쿼리 중 Where문에 BOARDNO가 필요합니다. -->
+		<!-- 그러기 위해서 hidden값으로 boardno를 보내줍니다. -->
+		<input type="hidden" name="boardno" th:value="${dto.boardno}">
+		<table border="1">
+			<col width="100">
+			<tr>
+				<th>작성자</th>
+				<td><input type="text" name="boardname" th:value="${dto.boardname}"></td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td><input type="text" name="boardtitle" th:value="${dto.boardtitle}"></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td>
+					<textarea id="summernote" name="boardcontent" th:text="${dto.boardcontent}"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="right">
+					<input type="submit" th:value="수정완료">
+					<input type="button" th:value="뒤로" th:onclick="|location.href='detail.do?boardno=${dto.boardno}'|">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

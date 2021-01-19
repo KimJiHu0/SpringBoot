@@ -1,0 +1,27 @@
+.title{
+	text-align: center;
+	background-color: skyblue;
+}
+
+.reply{
+	width: 802px;
+}
+
+.replytitle{
+	width : 100px;
+	text-align: center;
+	background-color: skyblue;
+}
+
+.replycontent{
+	width: 702px;
+}
+
+#writer{
+	border: none;
+	width: 702px;
+}
+
+#content{
+	resize: none;
+}

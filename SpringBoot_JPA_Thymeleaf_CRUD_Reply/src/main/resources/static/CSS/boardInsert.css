@@ -1,0 +1,9 @@
+/*작성자, 제목을 표시하는 태그 input태그에 class이름을 주고, css를 잡아줬습니다. */
+.inputBox{
+	border: none;
+}
+
+.title{
+	text-align: center;
+	background-color: skyblue;
+}

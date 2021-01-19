@@ -1,0 +1,24 @@
+.boardtitle{
+	text-decoration: none;
+	color: gray;
+}
+
+.boardtitle:hover{
+	color: black;
+}
+
+.allList{
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.thead{
+	background-color: skyblue;
+}
+
+.tbody{
+	border-bottom: 1px solid black;;
+	text-align: center;
+}
