@@ -2,4 +2,4 @@
 
 > Notion : 
 >
-> https://www.notion.so/11-Vue-3-68eb8347c9b94f5587d3f37301cdeb96
+> https://www.notion.so/08-Spring-Boot-Corona-4e7073eb117b4af5b1292e8d0e39bbdd
